@@ -13,5 +13,13 @@ body {
 
 .page {
     display: grid;
-    
+    row-gap: 30px;
+    column-gap: 30px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    grid-template-areas: 
+    "order payment"
+    "total total";
+    grid-template-columns: 1fr 1fr;
 }
