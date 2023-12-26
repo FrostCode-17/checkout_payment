@@ -74,6 +74,59 @@ body {
 }
 
 .item {
-    border-bottom: 2px solid #DDB892;;
+    border-bottom: 2px solid #DDB892;
     display: grid;
+    padding: 10px 0;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "quatity title price"
+    "quatity options price";
+    row-gap: 8px;
 }
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-quantity {
+    grid-area: quantity;
+}
+
+.item-title {
+    grid-area: title;
+    font-weight: bold;
+}
+
+.item-price {
+    grid-area: price;
+    font-weight: bold;
+}
+
+.item-options-list {
+    grid-row: options;
+    color: #B08968;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.item-option {
+    margin-bottom: 5px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user-input-label {
+    color: #885a2d;
+    background-color: #eee1d5;
+    font-size: 12px;
+    position: absolute;
+    left: 45px;
+    top: 7px;
+    padding: 0 2px;
+}
+
